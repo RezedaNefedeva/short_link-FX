@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #464646;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.rezeda.diplomfx.controllers.MainPageController">
+   <children>
+      <Label alignment="CENTER" prefHeight="60.0" prefWidth="700.0" style="-fx-background-color: #2a2a2a;" text="Сокращение ссылок" textFill="WHITE">
+         <font>
+            <Font name="Montserrat Bold" size="36.0" />
+         </font>
+      </Label>
+      <TextField fx:id="input_link" layoutX="36.0" layoutY="93.0" prefHeight="48.0" prefWidth="260.0" promptText="Полная ссылка" styleClass="text-input" stylesheets="@styles/diplom_style.css" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="90.0">
+         <font>
+            <Font name="Montserrat Regular" size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="input_small_link" layoutX="30.0" layoutY="160.0" prefHeight="48.0" prefWidth="260.0" promptText="Сокращенная ссылка" styleClass="text-input" stylesheets="@styles/diplom_style.css" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="168.0">
+         <font>
+            <Font name="Montserrat Regular" size="14.0" />
+         </font>
+      </TextField>
+      <Label fx:id="error_text" layoutX="30.0" layoutY="236.0" textFill="#ec4b4b">
+         <font>
+            <Font name="Montserrat Regular" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="btn" layoutX="104.0" layoutY="282.0" mnemonicParsing="false" stylesheets="@styles/diplom_style.css" text="Добавить" AnchorPane.topAnchor="282.0">
+         <font>
+            <Font name="Montserrat Regular" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ScrollPane hbarPolicy="NEVER" layoutX="334.0" layoutY="90.0" prefHeight="310.0" prefWidth="371.0" style="-fx-background-color: #464646;" AnchorPane.rightAnchor="-1.0">
+         <content>
+            <HBox accessibleRole="IMAGE_VIEW" prefHeight="309.0" prefWidth="371.0" style="-fx-background-color: #464646;">
+               <children>
+                  <VBox fx:id="list_links" prefHeight="310.0" prefWidth="357.0">
+                     <children>
+                        <HBox fx:id="link_box" prefHeight="50.0" prefWidth="340.0">
+                           <children>
+                              <Label alignment="CENTER" text="Сокращение:" textFill="WHITE">
+                                 <font>
+                                    <Font name="Montserrat Regular" size="20.0" />
+                                 </font>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <HBox.margin>
+                                    <Insets right="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Hyperlink fx:id="link" text="link" textFill="#e15151">
+                                 <font>
+                                    <Font name="Montserrat Regular" size="20.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets top="7.0" />
+                                 </HBox.margin>
+                              </Hyperlink>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

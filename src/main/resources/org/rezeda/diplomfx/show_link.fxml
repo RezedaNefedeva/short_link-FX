@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="50.0" prefWidth="300.0" style="-fx-background-color: #464646;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutY="11.0" text="Сокращение:" textFill="WHITE">
+         <font>
+            <Font name="Montserrat Regular" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="link" layoutX="158.0" layoutY="12.0" text="link" textFill="#ff4242" underline="true">
+         <font>
+            <Font name="Montserrat Regular" size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
